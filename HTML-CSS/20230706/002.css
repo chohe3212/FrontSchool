@@ -1,0 +1,17 @@
+
+body {
+  font-family: Pretendard-Regular, 'Times New Roman', Dotum, '돋움', sans-serif;
+}
+
+h2{
+  font-size : 40px;
+}
+h3{
+  font-size: 2em;
+}
+p{
+    overflow:hidden;  
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}

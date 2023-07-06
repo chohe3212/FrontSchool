@@ -1,0 +1,17 @@
+body {
+  color: red;
+}
+
+h1 {
+  color: inherit;
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+strong {
+  border-bottom: 5px solid currentColor;
+}
+
+h2 {
+  color: #999;
+  font-family: 'Pretendard-Regular', Verdana, sans-serif;
+}
