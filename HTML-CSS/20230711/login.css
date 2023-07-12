@@ -32,21 +32,25 @@ section button{
   justify-content: center;
   align-items: center;
   gap : 5px;
+  
   width: 318px;
   height: 40px;
   flex-shrink: 0;
   border-style: none;
   border-radius: 4px;
   background: #711BFF;
+
+  /*text*/
   color: #FFF;
   font-family: SpoqaHanSansNeo-Regular;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+
   margin: 16px 16px 0 16px;
-  padding-top: -2px;
 }
+
 .container{
   display: flex;
   justify-content: space-between;
