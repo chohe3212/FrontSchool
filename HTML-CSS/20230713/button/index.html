@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button</title>
+    <style>
+      button {
+        width: 88px;
+        height: 32px;
+        flex-shrink: 0;
+        background: url("images/button-default.svg");
+        text-align: center;
+        font-family: Pretendard;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: #cbd5df;
+        border: 0;
+      }
+      button:hover {
+        text-decoration-line: underline;
+      }
+      button:active {
+        text-decoration-line: underline;
+        background: url("./images/button-active.svg");
+      }
+      button.yes {
+        color: #439aff;
+      }
+      button.yes:hover {
+        color: #cbd5df;
+        background: url("images/yes-hover.svg");
+      }
+      button.yes:active {
+        color: #cbd5df;
+        background: url("images/yes-active.svg");
+      }
+      button.del {
+        color: #eb5757;
+      }
+      button.del:hover {
+        color: #cbd5df;
+        background: url("images/del-hover.svg");
+      }
+      button.del:active {
+        color: #cbd5df;
+        background: url("images/del-active.svg");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button type="button" class="button">Button</button>
+      <button type="button" class="button" disabled>Button</button>
+      <button type="button" class="yes">Yes</button>
+      <button type="button" class="del">Del</button>
+    </div>
+  </body>
+</html>
