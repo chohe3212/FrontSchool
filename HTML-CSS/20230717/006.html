@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      .container {
+        width: 600px;
+        height: 600px;
+        background-color: #eee;
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+          "header header header"
+          "section section aside"
+          "footer footer footer";
+      }
+      header {
+        background-color: skyblue;
+        grid-area: header;
+      }
+      section {
+        background-color: greenyellow;
+        grid-area: section;
+      }
+      aside {
+        background-color: aqua;
+        grid-area: aside;
+      }
+      footer {
+        background-color: palevioletred;
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>header</header>
+      <section>section</section>
+      <aside>aside</aside>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>
