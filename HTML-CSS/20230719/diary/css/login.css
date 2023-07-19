@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    background: var(--bg-dot, #FFFAF0);
+}
+
+.max-width{
+    width: 1224px;
+    max-width: 100%;
+    margin: auto;
+}
+header{
+    background: #FFF;
+    border-bottom: 1px solid #EEE;
+}
+
+header .max-width{
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input,button{
+    font:inherit;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 71px;
+}
+
+header .logo {
+    width: 156px;
+    height: 75px;
+    flex-shrink: 0;
+    margin: 22px auto 23px 108px;
+}
+
+header .join_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 108px 40px auto;
+
+    color: var(--text-2, #5A6A72);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+}
+
+main h2 svg{
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+main h2 svg .logo-heart{
+    stroke: transparent;
+    stroke-width: 0;
+    transform-origin: 50% 20px ;
+    scale: 0.8;
+    animation: heart 0.5s cubic-bezier(0.69, 1.08, 0.74, 0.35)infinite alternate; ;
+}
+
+@keyframes heart {
+    100%{
+        stroke: #ffc7d1;
+        stroke-width: 2px;
+        scale: 2.5;
+    }
+}
+
+main h3{
+    color: var(--text-1, #29363D);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+form label{
+    color: var(--text-1, #29363D);
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+form input {
+    border: 0;
+    width: 392px;
+    height: 48px;
+    border-radius: 4px 4px 0px 0px;
+    border-bottom: 1px solid var(--text-3, #677880);
+    background: #FFF;
+    padding-left: 10px;
+    font-size: 20px;
+}
+form button.login_button {
+    width: 392px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: var(--text-1, #29363D);
+    color: var(--bg-gray, #F4F5F5);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 24px;
+}
+
+footer{
+    color: var(--text-3, #677880);
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 52px;
+    text-align: center;
+}
