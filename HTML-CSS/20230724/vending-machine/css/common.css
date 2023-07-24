@@ -1,0 +1,229 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+body{
+  background-color: #EAE8FE;
+  margin: 0;
+}
+h1{
+  margin:0;
+  text-align: center;
+}
+ul, button{
+  margin:0;
+  padding: 0;
+}
+p, h2{
+  margin:0;
+}
+main{
+  display: flex;
+  justify-content: center;
+  gap:28px;
+  margin-top: 67px;
+}
+main .main-1{
+  width: 360px;
+    height: 545px;
+  background-color: #FFF;
+  padding: 31px 27px 28px 27px;
+}
+.main-1 .cola-container{
+  display: grid;
+  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  
+}
+.main-1 .cola-container li{
+width: 94px;
+  height: 130px;
+  border-radius: 10px;
+    border: 3px solid var(--blue, #6327FE);
+  list-style: none;
+  margin-bottom:12px;
+  text-align: center;
+}
+.main-1 .cola-container li img{
+width: 36px;
+  height: 65px;
+  margin-top: 11px;
+  margin-bottom: 6px;
+}
+.main-1 .cola-container li span{
+  color: var(--gray-1, #333);
+    text-align: center;
+    font-family: Noto Sans KR;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: block;
+    margin: 0 0 7px 0;
+}
+.main-1 .cola-container li strong {
+  padding: 3px 16px 5px 15px;
+  border-radius: 50px;
+    background: var(--blue, #6327FE);
+    color: #FFF;
+      text-align: center;
+      font-family: Noto Sans KR;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+      margin:0;
+}
+
+.main-1 form{
+
+}
+.main-1 form .change{
+  display: flex;
+}
+.main-1 form .change div {
+  border-radius: 5px;
+  width: 200px;
+  height: 33px;
+  display: flex;
+  background-color: #EAE8FE;
+  justify-content: space-between;
+  padding: 6px 7px 10px 7px;
+}
+.main-1 form .change h2,
+.main-1 form .change p{
+  color: #000;
+    font-family: Noto Sans KR;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.main-1 form .change button{
+  background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #000;
+      text-align: center;
+      font-family: Noto Sans KR;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      width: 94px;
+        height: 33px;
+}
+
+main .main-2{
+width: 360px;
+  height: 50px;
+background-color: #FFF;
+position: relative;
+margin-bottom: 20px;
+}
+.main-2 .fund{
+  margin: 9px 27px 9px 27px;
+  display: flex;
+  width: 306px;
+    height: 32px;
+    flex-shrink: 0;
+    background: #EAE8FE;
+    position: absolute;
+  border-radius: 5px;
+  justify-content: space-between;
+}
+.main-2 .fund h2{
+color: #000;
+  font-family: Noto Sans KR;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 6px;
+  margin-left: 10px;
+}
+.main-2 .fund p {
+color: #000;
+  text-align: right;
+  font-family: Noto Sans KR;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin:6px 10px 6px auto;
+}
+
+main .main-3{
+width: 360px;
+  height: 474px;
+  background-color: #FFF;
+text-align: center;
+padding-top: 25px;
+}
+main .main-3 h2 {
+  color: #000;
+    text-align: center;
+    font-family: Noto Sans KR;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+main .main-3 ul{
+  list-style: none;
+  background-color:#EAE8FE;
+  width: 306px;
+    height: 364px;
+  margin: auto;
+  margin-top: 13px;
+  padding-top: 12px;
+  padding-left: 12px;
+}
+main .main-3 li {
+  width: 276px;
+    height: 46px;
+    flex-shrink: 0;
+  display: flex;
+  background-color: #FFF;
+  margin-top: 6px;
+  border-radius: 5px;
+  align-items: center;
+}
+main .main-3 li img {
+  width: 18px;
+    height: 33px;
+  margin-left: 10px;
+}
+
+main .main-3 li p{
+  color: var(--gray-1, #333);
+    font-family: Noto Sans KR;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 10px;
+}
+
+main .main-3 li strong {
+width: 30px;
+height: 30px;
+  border-radius: 5px;
+    border: 1px solid var(--gray-4, #BDBDBD);
+  padding-top: 4px;
+  margin-left: auto;
+  margin-right: 8px;
+}
+
+main .main-3 .total{
+  color: #000;
+    text-align: right;
+    font-family: Noto Sans KR;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 6px 27px auto auto;
+}
