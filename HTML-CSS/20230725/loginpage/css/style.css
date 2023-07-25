@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+h1,
+input,
+h2{
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100%;
+  height: 100%;
+  margin:0;
+  background-color: #F2F2F2;
+  position: relative;
+}
+
+main{
+  display: inline-block;
+  position: absolute;
+  width: 520px;
+  height: 712px;
+  margin:0%;
+  background-color: #FFF;
+}
+.title h1{
+  margin: 20px auto 18px auto;
+  text-align: center;
+  color: #000;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 10px;
+}
+.title div{
+  width: 520px;
+    height: 1px;
+  background: #C4C4C4;
+}
+
+.login h2{
+  margin-top: 26px;
+  margin-left: 24px;
+  color: #000;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+.login input{
+  margin-left: 24px;
+  width: 472px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid var(--c-4-c-4-c-4, #C4C4C4);
+  background: #FFF;
+}
+.login .login-button{
+  margin-top: 21px;
+    margin-left: 24px;
+  border-radius: 5px;
+    background: #2F80ED;
+  width: 472px;
+  height: 50px;
+  color: #FFF;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    border: 0;
+}
+
+/* 외부 로그인 */
+.external-login{
+  padding-top:20px;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  justify-content: center;
+  align-items: center;
+}
+.external-login button{
+  display: flex;
+  align-items: center;
+
+  width: 472px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid var(--767676, #767676);
+  background: #FFF;
+}
+.external-login button img {
+  margin-left: 12px;
+}
+.external-login button p{
+    color: var(--767676, #767676);
+      text-align: center;
+      font-family: Spoqa Han Sans Neo;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      flex-grow: 1;
+}
+
+.external-login .facebook{
+border: 1px solid #2D9CDB;
+}
+.external-login .naver{
+border: 1px solid #00BF18;
+}
+.external-login .kakao{
+border: 1px solid #F2C94C;
+}

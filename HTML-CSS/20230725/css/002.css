@@ -1,0 +1,38 @@
+h2 {
+  margin:30px;
+}
+
+.btn-select {
+  width: 200px;
+  height: 30px;
+  background: purple;
+  color: #fff;
+}
+
+.list-member {
+  display: none;
+  width: 200px;
+  height: 30px;
+}
+
+.list-member.on {
+  display: block;
+}
+
+.list-member li {
+  height: 30px;
+  width: 200px;
+}
+
+.list-member li button {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid black;
+  border-top: none;
+}
+
+.list-member li button:hover {
+  background-color: bisque;
+}
