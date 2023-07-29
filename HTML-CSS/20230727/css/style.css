@@ -10,6 +10,7 @@ article{
 }
 #img{
   width:300px;
+  display: flex;
   height: 280px;
   margin:0 auto;
 }
