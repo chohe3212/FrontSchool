@@ -10,6 +10,10 @@ article{
 }
 #img{
   width:300px;
+<<<<<<< HEAD
+=======
+  display: flex;
+>>>>>>> cdae9153508ae6a5d271b29cc1943d975159662e
   height: 280px;
   margin:0 auto;
 }

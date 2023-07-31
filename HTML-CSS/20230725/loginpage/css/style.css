@@ -46,6 +46,7 @@ main{
 .login h2{
   margin-top: 26px;
   margin-left: 24px;
+  margin-bottom: 24px;
   color: #000;
     font-family: Spoqa Han Sans Neo;
     font-size: 20px;
@@ -60,6 +61,20 @@ main{
   border-radius: 5px;
   border: 1px solid var(--c-4-c-4-c-4, #C4C4C4);
   background: #FFF;
+  padding-left: 16px;
+  margin-bottom:11px;
+}
+.login .keep-login{
+  display: flex;
+  margin-left: 24px;
+}
+.login .keep-login p{
+  color: var(--767676, #767676);
+font-family: Spoqa Han Sans Neo;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
 .login .login-button{
   margin-top: 21px;
