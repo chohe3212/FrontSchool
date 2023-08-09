@@ -11,7 +11,7 @@ function add(a, b) {
   return;
 }
 
-let result4 = add(10, 20);
+let result1 = add(10, 20);
 
 ///////////////
 
@@ -57,7 +57,7 @@ function errorCode() {
 }
 let value = true;
 // errorCode 실행시키지 않았다
-let result1 = true || errorCode();
+let result3 = true || errorCode();
 
 ///////////////
 
@@ -94,11 +94,35 @@ hojun();
 // 또는 리턴값으로도 전달할 수 있을까요?
 // 답은 '네'입니다!
 
-function addAndMultiply(x, y) {
-  // 메모리 효율을 위해 함수를 내부에서 만들어서 사용
-  function add(x, y) {
-    return x + y;
-  }
-  let sum = add(x, y) * add(x, y);
+function add(a, b) {
+  return a + b;
+}
+
+let x = 10;
+let y = 20;
+console.log(add(x, y));
+
+// 1. 함수를 아규먼트로 전달
+// 아래와 같이 아규먼트 전달된 함수를 '콜백함수'라고 부릅니다.
+function add(x, y) {
+  return x + y;
+}
+
+function addAndMultiply(x, y, z) {
+  let sum = z(x, y) * z(x, y);
   return sum;
 }
+
+addAndMultiply(1, 2, add);
+
+// 2. 함수를 리턴값으로 전달(스코프와 클로저를 배우고 나서 다시 다룰 예정입니다.)
+// 지금 이해하려 하지 마세요.
+function one(x) {
+  function two(y) {
+    return x + y;
+  }
+  return two;
+}
+
+let result4 = one(10);
+result(100);

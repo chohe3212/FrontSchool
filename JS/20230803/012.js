@@ -74,3 +74,38 @@ factorial(5);
 factorial(1) == 1;
 
 // 6. 지역변수 전역변수
+let a = 10; // 전역변수
+function test() {
+  console.log(a);
+}
+test();
+
+let a1 = 10;
+function one() {
+  let a = 100; // 지역변수
+  function two() {
+    function three() {
+      console.log(a);
+    }
+    three();
+  }
+  two();
+}
+one();
+
+// 자신의 공간에 해당 변수가 없으면 상위 공간에서 찾습니다.
+// 못찾으면 error입니다.
+
+// 지역변수 끼리는 서로 간섭을 못합니다.
+function one() {
+  // 메모장
+  let x = 10; // x는 라인 수
+}
+
+function two() {
+  // 카메라
+  let x = 100; // x는 조리개값
+  console.log(x);
+}
+one();
+two();
