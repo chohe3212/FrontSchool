@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent"></div>
+
+    <ul></ul>
+    <button>Make me MORE!</button>
+    <script>
+      //document.createElement('p') // p는 가상돔이 되어 메모리상에만 존재함.
+
+      const text = document.createElement("p");
+      const text2 = document.createElement("p");
+      const textInside = document.createTextNode("문장입니다.");
+      const textInside2 = document.createTextNode("문장입니다.");
+      //text.appendChild("문장입니다.");// 불가능
+      // 노드를 넣은거기때문에
+      text2.appendChild(textInside2);
+      const parent = document.querySelector(".parent");
+
+      parent.appendChild(text);
+      parent.appendChild(text2);
+      //parent.removeChild(text2);
+
+      const myBtn = document.querySelector("button");
+      const myUl = document.querySelector("ul");
+
+      myBtn.addEventListener("click", function () {
+        for (let i = 0; i < 5; i++) {
+          const myLi = document.createElement("li");
+          const btnDel = document.createElement("button");
+          const btnTxt = document.createTextNode("버튼");
+
+          btnDel.append(btnTxt);
+          btnDel.addEventListener("click", () => {
+            myLi.remove();
+          });
+          myLi.append("삭제하기: ", btnDel);
+          // append는 문자도 가능
+          // 굿굿
+          myUl.appendChild(myLi);
+        }
+      });
+    </script>
+  </body>
+</html>

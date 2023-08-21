@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>innerText를 사용하는 예시</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <figure>
+      <img src="" alt="청바지 삼종세트" />
+      <figcaption>
+        상품가격 : 29,900 <span class="hidden"> VIP 회원이라면 29000원</span>
+      </figcaption>
+    </figure>
+    <script>
+      const cost = document.querySelector("figcaption");
+      console.log(cost.textContent);
+      console.log(cost.innerText);
+      // hidden 클래스는 안보이게 값을 가져오고 싶을때 innerText를 쓴다.
+
+      // 단순히 text를 가져오고 싶을때는 textContent를 사용한다.
+
+      // MDN
+      // textContent는 <script>와 <style> 요소를 포함한 모든 요소의 콘텐츠를 가져옵니다. 반면 innerText는 "사람이 읽을 수 있는" 요소만 처리합니다.
+    </script>
+  </body>
+</html>
