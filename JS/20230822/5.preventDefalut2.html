@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>preventDefault 실습</title>
+  </head>
+  <body>
+    <!-- 앵커의 기본 동작을 중지 -->
+    <a href="https://www.naver.com" class="link">네이버 링크입니다만..</a>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+      veritatis, assumenda atque quam, harum dolores odio sit at quis neque
+      voluptatibus velit ratione autem facilis dicta illo? Nihil, quae et.
+    </p>
+    <script>
+      //       **preventDefault** **실습**
+
+      // 이벤트 타입 contextmenu를 이용해 브라우저 오른쪽 버튼 이벤트 막고 '해당 페이지에서는 오른쪽 클릭을 제한합니다.’ 경고 띄우기
+      document.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+        alert("해당 페이지는 오른쪽 클릭을 제한합니다!!");
+      });
+    </script>
+  </body>
+</html>

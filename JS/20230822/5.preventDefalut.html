@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <!-- 앵커의 기본 동작을 중지 -->
+    <a href="https://www.naver.com" class="link">네이버 링크입니다만..</a>
+    <script>
+      const link = document.querySelector(".link");
+      link.addEventListener("click", (event) => {
+        console.log("clicked");
+        event.preventDefault();
+      });
+    </script>
+
+    <!-- submit 의 기본 동작을 중지 -->
+    <form action="">
+      <button type="submit" class="submit">제출</button>
+    </form>
+    <script>
+      const submit = document.querySelector(".submit");
+      // 서버사이드 랜더링
+      // 결과물을 보낼때 html화면을 클라이언트에게 보내는데
+      // submit 이벤트를 발생시키면 새로고침이 된다.
+      // 이를 막기위해 preventDefalut를 실행시키면 submit이벤트는 중단된다.
+      submit.addEventListener("click", (event) => {
+        console.log("clicked");
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>

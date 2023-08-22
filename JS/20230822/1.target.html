@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <article class="parent">
+      <ol>
+        <li><button class="btn-first" type="button">버튼1</button></li>
+        <li><button type="button">버튼2</button></li>
+        <li><button type="button">버튼3</button></li>
+      </ol>
+    </article>
+
+    <script>
+      const parent = document.querySelector(".parent");
+      parent.addEventListener("click", function (event) {
+        console.log(event.target);
+        if (event.target.nodeName === "BUTTON") {
+          event.target.textContent = "버튼4";
+          // 클릭 이벤트가 발생한 버튼의 텍스트를 바꿔준다.
+          // 이벤트 위임.
+        }
+        if (event.target.nodeName === "LI") {
+          event.target.textContent = "버튼4";
+          // 버튼은 li의 자식 요소인데 버블링 때문에 button을 클릭해도 text를 바꿔줘야하는것 아닌가요?
+          // 클릭 타겟을 찾는것이기 때문에 버튼을 클릭하면 button으로 찾아지기에 li를 클릭해야 if문으로 들어간다.
+        }
+      });
+    </script>
+  </body>
+</html>
