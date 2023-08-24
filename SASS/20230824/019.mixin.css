@@ -1,0 +1,7 @@
+nav {
+  background-image: url("./assets/img/background.png");
+}
+
+.title .border-left {
+  border-bottom: 1px solid black;
+}/*# sourceMappingURL=019.mixin.css.map */

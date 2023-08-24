@@ -1,0 +1,11 @@
+// scss 파일에서만 볼 수 있는 주석
+/*css 에서도 볼수 있는 주석*/
+.one{
+  color:red;
+  .two{
+    color:green;
+    .three{
+      color:blue;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.one {
+  color: red;
+}
+.one .three {
+  background-color: red;
+}
+
+.five {
+  color: red;
+}
+.five .six {
+  background-color: red;
+}
+
+.four {
+  color: red;
+}/*# sourceMappingURL=012.지역변수.css.map */

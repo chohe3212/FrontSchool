@@ -1,0 +1,32 @@
+// 저는 '네이스팅'에서 지역변수는 선언하지 않습니다.
+.one {
+  // 지역변수
+  $value: red;
+  color: $value;
+
+  .three {
+    background-color: $value;
+  }
+}
+
+// error 납니다.
+// .two {
+//     color: $value;
+// }
+
+// 저는 '네이스팅'에서 지역변수는 선언하지 않습니다.
+.five {
+  // 지역변수
+  // 더 권장하지 않습니다.
+  $value: red !global;
+  color: $value;
+
+  .six {
+    background-color: $value;
+  }
+}
+
+// error 가 안남. 하지만 지역에서 global을 사용하는것보다 전역변수로 선언하는것이 훨씬 나음.
+.four {
+  color: $value;
+}

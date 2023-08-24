@@ -1,0 +1,22 @@
+// box(100,1)
+//
+
+@mixin box($size, $shape){
+  width: $size;
+  height: $size;
+  @if($shape == "r"){
+    border: 1px solid black;
+  }
+  @else if($shape == "c"){
+    border-radius: 50%;
+    border: 1px solid black;
+  }
+}
+
+.one{
+  @include box(100px,r)
+}
+
+.two {
+  @include box(100px, c)
+}

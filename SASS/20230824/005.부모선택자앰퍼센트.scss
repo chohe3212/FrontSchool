@@ -1,0 +1,17 @@
+.box {
+  &:focus {}
+
+  // 가상선택자
+  &:hover {}
+
+  &:active {}
+
+  &:first-child {}
+
+  &:nth-child(2) {}
+
+  &::after {}
+
+  // 가상요소
+  &::before {}
+}

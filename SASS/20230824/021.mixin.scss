@@ -1,0 +1,47 @@
+// @mixin 이름(매개변수) // 생성하기
+// @include 이름(인수) // 사용
+
+@mixin flex($align) {
+  display: flex;
+  flex-direction: row; 
+  justify-content: $align; // 이렇게 넣으면 따옴표가 넣어 들어가게 된다.
+  align-items: #{$align}; // 이렇게 입력하면 따옴표가 사라지고 들어가게 된다.
+}
+
+.one {
+  @include flex('center')
+}
+
+
+// 파라미터가 없는 믹스인
+@mixin box{
+  width:100px;
+  height: 100px;
+  background-color: red;
+}
+.one{
+  @include box;
+}
+.two{
+  @include box;
+}
+
+
+
+// 지역 믹스인(보자마자 잊어주세요.)
+
+.card {
+  @mixin box {
+    width: 100px;
+    height: 100px;
+  }
+
+  @include box;
+  background-color: blue;
+}
+
+// red
+// .profile {
+//     @include box;
+//     background-color: red;
+// }

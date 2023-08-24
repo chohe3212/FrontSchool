@@ -1,0 +1,17 @@
+// 개인적으로는 거의 사용하지 않습니다.
+// @while 조건 {
+//     // 반복할 내용
+// }
+$info-font-size: 20px;
+
+@function mini($size) {
+  @while $size >10 {
+    $size: $size - 1;
+  }
+
+  @return $size;
+}
+
+.test {
+  font-size: mini($info-font-size);
+}

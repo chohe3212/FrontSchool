@@ -1,0 +1,23 @@
+.test {
+  background: url("./assets/img/background.png");
+}
+
+.test2 {
+  background: url("./assets/img/icon_font_awesome1.png");
+}
+
+.title {
+  font-size: 40px;
+}
+
+.title2 {
+  font-size: 80px;
+}
+
+.title3 {
+  font-size: 45px;
+}
+
+.title4 {
+  color: #f00;
+}/*# sourceMappingURL=011.변수연습문제.css.map */

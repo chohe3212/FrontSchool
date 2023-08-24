@@ -1,0 +1,12 @@
+.one {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.two {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid black;
+}/*# sourceMappingURL=024.mixin연습문제.css.map */
