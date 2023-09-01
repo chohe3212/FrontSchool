@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const result = fetch(
+        "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json"
+      )
+        .then((response) => {
+          // console.log(response);
+          // response는 response 객체
+          if (!response.ok) {
+            throw new Error(`HTTP ERROR! State : ${response.status}`); // 사용자 정의 에러
+            // Error 객체를 던짐.
+          }
+          return response.json(); // promise 객체형태로 반환
+          // resolve메소드가 내부적으로 실행됨.
+          //  그 결과값이 then의 data로 전달
+        })
+        .then((data) => {
+          // response 로 들어온 값을 넣어줌. js 객체로
+          console.log(data);
+          return data;
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+      // json -> 프라미스객체 -> 자스객체
+    </script>
+  </body>
+</html>
