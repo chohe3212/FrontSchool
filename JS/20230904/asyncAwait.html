@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      async function message() {
+        const hello = await new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("hello");
+          }, 100); // 100ms 뒤에 resolve를 실행
+        });
+        // await이 끝날때까지 기다림.
+        // 비동기코드가 마치 동기적으로 실행됨.
+
+        // await은 async함수 안에서 코드의 실행 순서를 확정지을 수 있다.
+        // 비동기는 어떤게 먼저 완료가 될지 모른다. 따라서 await을 활용하면 이를 알 수 있다.
+
+        // 이를 promise로 바꿔보면 async가 얼마나 편한지 알 수 있다.
+
+        const world = await new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("world");
+          }, 100); // 100ms 뒤에 resolve를 실행
+        });
+
+        console.log(`${hello} ${world}`);
+      }
+    </script>
+  </body>
+</html>

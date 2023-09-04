@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async await 배열</title>
+  </head>
+  <body>
+    <script>
+      // 두가지 비동기 작업을 동시에 실행하고 싶을 경우
+      // 배열로
+      async function message() {
+        const [hello, world] = await Promise.all([
+          // 배열 0번째
+          new Promise((resolve) => {
+            setTimeout(() => {
+              resolve("hello");
+            }, 100); // 100ms 뒤에 resolve를 실행
+          }),
+          // 배열 1번째
+          new Promise((resolve) => {
+            setTimeout(() => {
+              resolve("world");
+            }, 100); // 100ms 뒤에 resolve를 실행
+          }),
+        ]);
+
+        console.log(`${hello} ${world}`);
+      }
+      message();
+    </script>
+  </body>
+</html>

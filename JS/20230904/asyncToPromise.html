@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function message() {
+        new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("hello");
+          }, 100); // 100ms 뒤에 resolve를 실행
+        })
+          .then((result) => {
+            // 첫번째 promise에 결과값이 들어감. // hello
+            return new Promise((resolve) => {
+              // return으로 promise 객체 반환.
+              setTimeout(() => {
+                resolve(result + " world");
+              }, 100); // 100ms 뒤에 resolve를 실행
+            });
+          })
+          .then((message) => {
+            // message로 들어오는 값은 : result + " world"
+            console.log(message);
+          });
+
+        // 고치기 전 코드에서,
+        // console.log(`${hello} ${world}`)
+        // pending 상태의 promise 객체가 나옴.
+      }
+      message();
+    </script>
+  </body>
+</html>
