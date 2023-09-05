@@ -30,11 +30,13 @@ class ColaGenerator {
     const docFrag = new DocumentFragment(); // 아이템들을 fragment에 붙이고 fragment만 보여주면 렌더링이 효율적으로 됨.
 
     data.forEach((el) => {
+      // forEach로 순회하며 데이터를 추가함.
       const item = document.createElement("li"); // 요소 추가
-      const itemTemplate = `<button type="button" class="btn-cola on">
-              <img src="./img/cola-original.png" alt="" />
-              <span class="cola-name">Original_Cola</span>
-              <strong class="cola-price">1000원</strong>
+      const itemTemplate = `<button type="button" class="btn-cola" data-item = "${el.name}"
+                data-count = "${el.count}" data-price = "${el.cost}" data-img = "${el.img}">
+              <img src="./img/${el.img}" alt="${el.img}" />
+              <span class="cola-name">${el.name}</span>
+              <strong class="cola-price">${el.cost}원</strong>
             </button>`;
       item.innerHTML = itemTemplate;
       docFrag.append(item); // 데이터 배열을 순회하며 template를 생성하고 li에 붙게됨.
