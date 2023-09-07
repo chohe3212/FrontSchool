@@ -12,6 +12,8 @@ function ListRender() {
     <section className="list">
       {list.map((v) => {
         // index로 key props를 항상 사용하지 않는다.
+
+        //
         // 왜냐? 지금은 설명 안해줌..ㅜㅜ 아마 성능저하??
         if (v.visited === true) {
           return (
