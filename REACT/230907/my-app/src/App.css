@@ -1,0 +1,25 @@
+li{
+  list-style: none;
+}
+.newClass {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  color:white
+}
+.red{
+  color:red;
+}
+
+.list li{
+  padding:3px;
+  border: 1px solid #3d3d3d;
+}
+.list li + li{
+  border-top: none;
+}
+
+.visited{
+  background-color: skyblue;
+  color: #fff;
+}
