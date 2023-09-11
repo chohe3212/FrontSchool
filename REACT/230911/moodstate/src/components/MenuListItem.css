@@ -1,0 +1,7 @@
+.btn-item{
+  height: 50px;
+  width:100%;
+  &:hover{
+    background-color: rgb(152, 152, 152);
+  }
+}
