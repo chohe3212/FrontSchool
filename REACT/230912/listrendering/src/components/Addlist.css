@@ -1,0 +1,7 @@
+.input_container{
+  width:70%;
+  border: 1px solid black;
+  display: flex;
+  gap:10px;
+  padding: 20px;
+}
