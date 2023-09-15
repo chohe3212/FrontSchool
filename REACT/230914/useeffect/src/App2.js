@@ -15,6 +15,7 @@ function Time(props) {
       setHour(t.getHours());
       setMin(t.getMinutes());
       setSec(t.getSeconds());
+      
     }, 1000);
     return () => {
       //컴포넌트가 사라지기 전에 setinterval을 clearinterval해줍니다
