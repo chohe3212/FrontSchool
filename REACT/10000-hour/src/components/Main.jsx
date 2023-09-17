@@ -1,5 +1,53 @@
 import React from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
+
+
+function Main(props) {
+  let expertValue = ''
+  let hourValue = ''
+  // 부모에게 값 전달
+  const onChangeExpert = (e)=>{
+    expertValue = e.target.value
+    props.setExpert(expertValue)
+  }
+  const onChangeHour = (e) =>{
+    hourValue = e.target.value
+    props.setHour(hourValue)
+  }
+
+  const clickBtnResult = () => {
+    
+    props.setVisible(true);
+  }
+  return (
+    <StyledMain>
+      <h1>
+        <img src="images/clock.svg" alt="clockImage" /><div className = "logo"><img src="images/Frame.svg" alt="LogoImage" /></div>
+      </h1>
+      <h2>“연습은 어제의 당신보다 당신을 더 낫게 만든다.”</h2>
+      <div className = "container_description">
+      <span className = "double_quotation_marks">“</span>
+      <p className = "description"><strong>1만 시간의 법칙</strong>은 <br />어떤 분야의 전문가가 되기 위해서는 <br />최소한 1만 시간의 훈련이 필요하다는 법칙이다.</p><span className= "double_quotation_marks">”</span>
+      </div>
+      <p className='input_form'>
+        나는 
+
+        <input type="text" placeholder='예)프로그래밍' value = {props.expert} onChange={onChangeExpert} /> 
+
+        전문가가 될 것이다. <br />그래서 앞으로 매일 하루에 
+
+        <input type="text" placeholder='예)5시간' value = {props.hour} onChange={onChangeHour}/> 
+
+        시간씩 훈련할 것이다.
+      </p>
+      <div className='result_button'><button onClick={clickBtnResult}>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
+      <img src="images/click.svg" alt="clickImage" /></div>
+
+    </StyledMain>
+  )
+}
+
 
 const StyledMain = styled.main`
     display: flex;
@@ -40,8 +88,6 @@ const StyledMain = styled.main`
     display: flex;
     font-family: GmarketSansMedium;
     justify-content: center;
-
-    /*이거 왜이러지ㅠㅜㅠㅜㅠ 진짜 미치겟네*/
     
     & .description{
     color: #FFF;
@@ -101,26 +147,5 @@ const StyledMain = styled.main`
   }
 
 `
-
-function Main() {
-  return (
-    <StyledMain>
-      <h1>
-        <img src="images/clock.svg" alt="clockImage" /><div className = "logo"><img src="images/Frame.svg" alt="LogoImage" /></div>
-      </h1>
-      <h2>“연습은 어제의 당신보다 당신을 더 낫게 만든다.”</h2>
-      <div className = "container_description">
-      <span className = "double_quotation_marks">“</span>
-      <p className = "description"><strong>1만 시간의 법칙</strong>은 <br />어떤 분야의 전문가가 되기 위해서는 <br />최소한 1만 시간의 훈련이 필요하다는 법칙이다.</p><span className= "double_quotation_marks">”</span>
-      </div>
-      <p className='input_form'>
-        나는 <input type="text" placeholder='예)프로그래밍' /> 전문가가 될 것이다. <br />그래서 앞으로 매일 하루에 <input type="text" placeholder='예)5시간'/> 시간씩 훈련할 것이다.
-      </p>
-      <div className='result_button'>      <button>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
-      <img src="images/click.svg" alt="clickImage" /></div>
-
-    </StyledMain>
-  )
-}
 
 export default Main
