@@ -18,6 +18,7 @@ function Counter() {
   };
   useEffect(() => {
     console.log("이펙트~!");
+    
     if (count % 2 === 0) {
       alert("짝수입니다~!");
     } else {
