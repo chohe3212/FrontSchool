@@ -35,7 +35,7 @@ const StyledModal = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  & h4{
+  h4{
     color: #5B2386;
     font-family: 'OTEnjoystoriesBA';
     font-size: 96px;
@@ -44,7 +44,7 @@ const StyledModal = styled.section`
     margin-top: 76px;
     margin-bottom: 4px;
   }
-  & p{
+  p{
     color: #5B2386;
     font-family: 'OTEnjoystoriesBA';
     font-size: 36px;
@@ -52,7 +52,7 @@ const StyledModal = styled.section`
     text-align: center;
     margin-bottom: 33px;
   }
-  & button{
+  button{
     margin-top: 26px;
     margin-right: 18px;
     margin-top: 115px;

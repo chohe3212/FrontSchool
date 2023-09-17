@@ -32,13 +32,9 @@ function Main(props) {
       </div>
       <p className='input_form'>
         나는 
-
         <input type="text" placeholder='예)프로그래밍' value = {props.expert} onChange={onChangeExpert} /> 
-
         전문가가 될 것이다. <br />그래서 앞으로 매일 하루에 
-
-        <input type="text" placeholder='예)5시간' value = {props.hour} onChange={onChangeHour}/> 
-
+        <input type="number" placeholder='예)5시간' value = {props.hour} onChange={onChangeHour}/> 
         시간씩 훈련할 것이다.
       </p>
       <div className='result_button'><button onClick={clickBtnResult}>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
@@ -70,7 +66,7 @@ const StyledMain = styled.main`
     margin-top: 140px;
     position: relative;
     text-align: center;
-    & .logo{
+    .logo{
           position: absolute;
     top:50%;
     left:50%;
@@ -84,34 +80,35 @@ const StyledMain = styled.main`
     font-size: 36px;
     font-family:OTEnjoystoriesBA;
   }
-  & .container_description{
+  .container_description{
     display: flex;
     font-family: GmarketSansMedium;
     justify-content: center;
     
-    & .description{
+    .description{
     color: #FFF;
     text-align: center;
     font-size: 18px;
     font-family: GmarketSansMedium;
     line-height:normal;
-    & strong{
+    strong{
       font-weight: 700;
       font-size: 24px;
     }
   }
-  & .double_quotation_marks{
+  .double_quotation_marks{
       color: rgba(252, 238, 33, 0.30);
       font-size: 96px;
     }
 
-  }  & .input_form{
+  }
+  .input_form{
     color: #FFF;
     margin-top: 119px;
     font-size: 24px;
     text-align: center;
     font-family: GmarketSansMedium;
-    & input{
+    input{
       width: 228px;
       height: 57px;
       border-radius: 7px;
@@ -122,9 +119,10 @@ const StyledMain = styled.main`
     }
   }
 
-  & .result_button{
+  .result_button{
     display: flex;
-    & button{
+    
+    button{
     margin-top: 115px;
     border-radius: 56px;
     background: #FCEE21;
@@ -137,7 +135,7 @@ const StyledMain = styled.main`
     font-weight: 700;
     cursor: pointer;
   }
-  & img{
+  img{
     width: 64px;
     height: 72px;
     top: 145px;

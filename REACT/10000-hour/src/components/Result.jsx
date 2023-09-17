@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 function Result(props) {
 
+  let hour = parseInt(10000/props.hour)
   const onClickTraining = () =>{
     props.setModal(true)
   }
@@ -13,7 +14,7 @@ function Result(props) {
     <StyledResult>
       <p className='result'>
         당신은 <strong>{props.expert}</strong> 전문가가 되기 위해서 <br />
-        대략 <strong>{props.hour}</strong>일 이상 훈련하셔야 합니다! : &#41;
+        대략 <strong>{hour}</strong>일 이상 훈련하셔야 합니다! : &#41;
       </p>
       <button className = "training_btn" onClick={onClickTraining}>훈련하러 가기 GO! GO!</button>
       <button className = "share_btn">공유하기</button>
@@ -27,7 +28,7 @@ const StyledResult = styled.section`
     font-weight: normal;
     font-style: normal;
 }
-  & .result{
+  .result{
 
     margin-top: 147px;
     text-align: center;
@@ -37,12 +38,12 @@ const StyledResult = styled.section`
     font-style: normal;
     font-weight: 400;
     line-height: normal;  
-    & strong{
+    strong{
       font-size: 72px;
       font-weight: 700;
     }
   }
-  & .training_btn{
+  .training_btn{
     margin-right: 18px;
     margin-top: 115px;
     border-radius: 56px;
@@ -57,7 +58,7 @@ const StyledResult = styled.section`
     cursor: pointer;
   }
   
-  & .share_btn{
+  .share_btn{
     margin-top: 115px;
     border-radius: 56px;
     background: #FFF;;
