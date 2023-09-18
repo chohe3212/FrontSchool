@@ -17,8 +17,8 @@ function Main(props) {
   }
 
   const clickBtnResult = () => {
-    
     props.setVisible(true);
+    
   }
   return (
     <StyledMain>
