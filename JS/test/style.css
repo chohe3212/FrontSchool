@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+}
+input{
+    border: none;
+    background-color: transparent ;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: var(--gradient2, radial-gradient(293.21% 130.49% at 3.59% 5.28%, #F0F4FF 0%, #A5B6EE 100%));
+    background-size: cover;
+}
+header{
+    margin-top: 72px;
+}
+main .container{
+    width: 400px;
+    height: 360px;
+    border-radius: 16px;
+    margin:60px auto 60px auto ;
+    background: var(--gradient, linear-gradient(144deg, #5572BB 2.13%, #374B7C 102.97%));
+    /* shadow */
+    box-shadow: 20px 20px 60px 10px rgba(55, 75, 124, 0.40);
+}
+main .container h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 48px;
+    color: #FFF;
+    font-family: Pretendard;
+    font-size: 24px;
+    &::after{
+        width: 312px;
+        height: 1px;
+        margin-top: 23px;
+        content:"";
+        background : #3D538A;
+    }
+}
+
+
+main .container .time{
+    display: flex;
+    justify-content: center;
+    margin-top: 33px; 
+    gap:20px
+}
+
+main .container .time .time_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+main .container .time .time_container label{
+    color: var(--light, #A5B6EE);
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: Pretendard;
+}
+
+main .container .time .time_container input{
+    width: 80px;
+    height: 80px;
+    background-image: url('./imgs/input-background.svg');
+    color: #FFF;
+    text-align: center;
+    /* Bold_40px */
+    font-family: Pretendard;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+main .container .button_container{
+    display: flex;
+    justify-content: center;
+    gap:12px
+}
+
+.disabled{
+    width: 112px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: #324577;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.05) inset;
+    color: #617199;
+    /* Bold_14px */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    gap:5px;
+}
+
+footer{
+    color: #8596BF;
+    text-align: center;
+}

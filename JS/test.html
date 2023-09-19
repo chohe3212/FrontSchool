@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="root"></div>
+    <script>
+        const root = document.querySelector(".root")
+        const container = document.createElement("div")
+        container.className = "container"
+
+        const ir = document.createElement("h1")
+        ir.className = "ir"
+        ir.textContent = "테스트 페이지"
+
+        const section = document.createElement("section")
+        const section_title = document.createElement("h2")
+        section_title.className = "section_title"
+        section_title.textContent="섹션제목"
+
+        const section_img = document.createElement("img")
+        section_img.className = "section_img"
+        section_img.setAttribute("src","img.jpg")
+        section_img.setAttribute("alt","섹션이미지")
+
+        const section_contents = document.createElement("p")
+        section_contents.className = "section_contents"
+        section_contents.textContent="내용"
+
+        section.appendChild(section_title)
+        section.appendChild(section_img)
+        section.appendChild(section_contents)
+
+        container.appendChild(ir)
+        container.appendChild(section)
+
+        root.appendChild(container)
+
+        
+
+    </script>
+</body>
+</html>
