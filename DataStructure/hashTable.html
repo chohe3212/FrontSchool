@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hashTable</title>
+  </head>
+  <body>
+    <script>
+      class HashTable {
+        constructor(size) {
+          this.data = new Array(size);
+          // 배열로 구현해봄.
+          // linked list를 구현하기 위해 3중배열로 만듬.
+        }
+        // 해싱 함수
+        generateRandomHash(key) {
+          let hash = 0;
+
+          for (let i = 0; i < key.length; i++) {
+            hash = (key.charCodeAt(i) * i) % this.data.length;
+            // array 길이만큼 해시테이블 만듦.
+          }
+          return hash;
+        }
+
+        // insertion
+        set(key, value) {
+          // 데이터의 주소값
+          // 0-29 수가 address로 들어가게 됨.
+          const address = this.generateRandomHash(key);
+
+          if (!this.data[address]) {
+            this.data[address] = [];
+            this.data[address].push([key, value]);
+            return this.data;
+          } else {
+            for (let i = 0; i < this.data[address].length; i++) {
+              // 여러개의 데이터가 이미 같은 주소를 사용하는 경우, 그리고 같은 키를 사용하는 경우 덮어버리기
+              if (this.data[address][i][0] == key) {
+                this.data[address][i][1] = value;
+
+                return this.data;
+              }
+            }
+            // 내가 사용하는 키가 처음 사용된 경우
+            this.data[address].push([key, value]);
+            return this.data;
+          }
+        }
+        get(key) {
+          // 값을 가져오는 함수를 만들어보기.
+          const address = this.generateRandomHash(key);
+
+          if (this.data[address]) {
+            for (let i = 0; i < this.data[address].length; i++) {
+              // 찾고자 하는 데이터의 키와 저장된 키의 값이 동일한지 확인합니다.
+              if (this.data[address][i][0] == key) {
+                return this.data[address][i][1];
+              }
+            }
+          }
+
+          return undefined;
+        }
+        keys() {
+          const keyArray = [];
+
+          // 우선 모든 데이터를 순회합니다.
+          for (let i = 0; i < this.data.length; i++) {
+            if (this.data[i]) {
+              if (this.data[i].length > 1) {
+                for (let j = 0; j < this.data[i].length; j++) {
+                  keyArray.push(this.data[i][j][0]);
+                }
+              } else {
+                keyArray.push(this.data[i][0][0]);
+              }
+            }
+          }
+
+          return keyArray;
+        }
+      }
+      const hashTable = new HashTable(10);
+
+      hashTable.set("hello", "lions");
+      hashTable.set("hello1", "lions1");
+      hashTable.set("hello2", "lions2");
+      hashTable.set("hello3", "lions3");
+    </script>
+  </body>
+</html>
